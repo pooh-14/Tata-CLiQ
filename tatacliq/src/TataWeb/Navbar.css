@@ -24,6 +24,7 @@
    height: 45px;
    margin-left: 47%;
    margin-top: 8%;
+   mix-blend-mode: color-dodge;
 }
 
 #right{
