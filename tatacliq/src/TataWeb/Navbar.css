@@ -71,7 +71,7 @@
 
 #down>div:nth-child(1){
     display: flex;
-    margin-left: 20px;
+    padding-left: 10px;
 }
 
 #down>div:nth-child(1)>i{
@@ -79,14 +79,31 @@
     margin-left: 5px;
 }
 
+#down>div:nth-child(1):hover{
+    width: 100px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    align-items: center;
+}
+
 #down>div:nth-child(2){
     display: flex;
-    margin-left: 40px;
+    margin-left: 30px;
+    padding-left: 10px;
 }
 
 #down>div:nth-child(2)>i{
     margin-top: 6px;
     margin-left: 5px;
+}
+
+#down>div:nth-child(2):hover{
+    width: 70px;
+    height: 100%;
+    background-color: white;
+    color: black;
+    align-items: center;
 }
 
 #down>div:nth-child(3){
@@ -102,6 +119,7 @@
     margin-left: 15px;
     margin-top: 10px;
 }
+
 ::placeholder{
   color: white;  
 }
@@ -120,7 +138,108 @@
     width: 80px;
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    
+    margin-left: 20px; 
 }
+
+#down>div:nth-child(4)>i:hover{
+ transform: scale(1.07);
+ transition: 500ms;
+}
+
+#categories{
+    position: relative;
+}
+
+#dropdown{
+    /* display: none; */
+    position: absolute;
+    width: 1000px;
+    /* height: 520px; */
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    display: flex;
+}
+
+#dropdown>div:nth-child(1)>div{
+    display: flex;
+    justify-content: space-between  ;
+    /* border: 1px solid red; */
+    width: 250px;
+    height: 56px;
+    align-items: center;
+    border-bottom: 1px solid rgb(223, 218, 218);
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: grey;
+    font-weight: 600;
+}
+
+#dropdown>div:nth-child(1)>div:hover{
+    color: black;
+}
+
+#dropdown>div:nth-child(1)>div:last-child{
+    border-bottom: none;
+}
+
+#dropdown>div:nth-child(2){
+    width: 750px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: grey;
+    line-height: 30px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+#dropdown>div:nth-child(2)>div{
+    width: 24%;
+    /* border: 1px solid red; */
+    margin-right: 7px;
+}
+
+#dropdown>div:nth-child(2)>div>h4{
+    color: black;
+}
+
+#dropdown>div:nth-child(2)>div>p:hover{
+    color: red;
+}
+
+#dropmen{
+    display: none;
+    position: absolute;
+    left: 610px;
+    width: 720px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: grey;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+#dropmen>div{
+    width: 24%;
+    /* border: 1px solid red; */
+    margin-right: 7px;
+}
+
+#dropmen>div>h4{
+    color: black;
+}
+
+#dropmen>div>p:hover{
+    color: red;
+}
+
+
+    
 
