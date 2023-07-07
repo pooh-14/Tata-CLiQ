@@ -1,4 +1,6 @@
 import "./../TataWeb/Mensmultiple.css";
+import myData from './../data/products.json'
+
 function Mensmultiple() {
   return(
     <div id="menz">
@@ -105,8 +107,43 @@ function Mensmultiple() {
             </div>
         </div>
         <div id="mensright">
+            {myData.map((product) => (
+                <div>
+                <div>
+                    <img src={product.image}/></div>
+                <div>
+                    <p>{product.name}</p>
+                    <p>{product.description}</p>
+                    <span>₹{product.price}</span>
+                    <span><s>₹{product["Before Discount"]}</s> </span>
+                    <div>
+                      <span>
+                        <p>{product.Ratings}</p>
+                        <i class="fa-solid fa-star fa-xs"></i>
+                      </span>
+                      <span>{product.count}</span>
+                    </div>
+                    <p>{product.stock}</p>
+                </div>
+
+                <div id="like">
+                 <img style={{width:"30px" , height:"30px",
+                  border: "1px solid white", borderRadius:"7px",
+                   backgroundColor:"rgba(254,254,254,0.9)"}} 
+                 src="https://www.tatacliq.com/src/general/components/img/WL1.svg"/>
+               </div>
+               <div id="similar">
+                 <img style={{width:"30px" , height:"30px",
+                  border: "1px solid white", borderRadius:"7px",
+                   backgroundColor:"rgba(254,254,254,0.9)"}} 
+                 src="https://www.tatacliq.com/src/general/components/img/similarIconNew.svg"/>
+               </div>
+
+            </div>
+            ))}
             
         </div>
+       
       </div>
     </div>
      )

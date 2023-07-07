@@ -1,0 +1,129 @@
+[
+  {
+    "p_id": "0",
+    "name": "U.S. Polo Assn.",
+    "description": "U.S. Polo Assn. Ivory Cotton Regular Fit Polo T-Shirt",
+    "price": 1899,
+    "Before Discount": 2000,
+    "Ratings": "5",
+    "count": "(1)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016373929_437Wx649H_202302042021191.jpeg"
+  },
+  {
+    "p_id": "1",
+    "name": "Levi's",
+    "description": "Levi's 512 Mid Indigo Slim Fit Jeans",
+    "price": 1855,
+    "Before Discount": 3194,
+    "Ratings": "4.3",
+    "count": "(4)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015298354_437Wx649H_202211152202081.jpeg"
+  },
+  {
+    "p_id": "2",
+    "name": "United Colors of Benetton",
+    "description": "United Colors of Benetton Maroon Polo T-Shirt",
+    "price": 1034,
+    "Before Discount": 2299,
+    "Ratings": "3",
+    "count": "(2)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014765428_437Wx649H_202210061555121.jpeg"
+  },
+  {
+    "p_id": "3",
+    "name": "Jack & Jones",
+    "description": "Jack & Jones Navy Blue Cotton Slim Fit Polo T-Shirt",
+    "price": 764,
+    "Before Discount": 1699,
+    "Ratings": "4.6",
+    "count": "(14)",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015247442_437Wx649H_202211110452311.jpeg"
+  },
+  {
+    "p_id": "4",
+    "name": "United Colors of Benetton",
+    "description": "Dark Blue Cotton Skinny Fit Jeans",
+    "price": 1574,
+    "Before Discount": 3499,
+    "Ratings": "3.3",
+    "count": "(4)",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014073271_437Wx649H_202208071257521.jpeg"
+  },
+  {
+    "p_id": "5",
+    "name": "U.S. Polo Assn.",
+    "description": "U.S. Polo Assn. Dark Blue Cotton Skinny Fit Jeans",
+    "price": 2309,
+    "Before Discount": 3299,
+    "Ratings": "4.6",
+    "count": "(8)",
+    "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000015591343_437Wx649H_202212081003121.jpeg"
+  },
+  {
+    "p_id": "6",
+    "name": "U.S. Polo Assn.",
+    "description": "U.S. Polo Assn. Dark Green Cotton Regular Fit Printed Polo T-Shirt",
+    "price": 1599,
+    "Before Discount": 3000,
+    "Ratings": "3",
+    "count": "(2)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000014428153_437Wx649H_202209112250181.jpeg"
+  },
+  {
+    "p_id": "7",
+    "name": "Pepe Jeans",
+    "description": "Pepe Jeans Green Cotton Regular Fit Colour Block Polo T-Shirt",
+    "price": 899,
+    "Before Discount": 1799,
+    "Ratings": "3.9",
+    "count": "(14)",
+    "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016236811_437Wx649H_202301261320511.jpeg"
+  },
+  {
+    "p_id": "8",
+    "name": "ETA",
+    "description": "ETA by Westside Printed Black Resort Fit Shirt",
+    "price": 899,
+    "Before Discount": 1000,
+    "Ratings": "3.8",
+    "count": "(5)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017911985_437Wx649H_202306121421201.jpeg"
+  },
+  {
+    "p_id": "9",
+    "name": "Lee",
+    "description": "Lee Black Cotton Regular Fit Jeans",
+    "price": 1649,
+    "Before Discount": 3294,
+    "Ratings": "3.6",
+    "count": "(5)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017328404_437Wx649H_202304220320381.jpeg"
+  },
+  {
+    "p_id": "10",
+    "name": "Byford by Pantaloons",
+    "description": "Byford By Pantaloons Medium Blue Cotton Slim Fit Jeans",
+    "price": 760,
+    "Before Discount": 999,
+    "Ratings": "4.1",
+    "count": "(13)",
+    "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017245827_437Wx649H_202304162107301.jpeg"
+  },
+  {
+    "p_id": "11",
+    "name": "U.S. Polo Assn.",
+    "description": "U.S. Polo Assn. Dark Green Regular Fit Cotton Shirt",
+    "price": 2299,
+    "Before Discount": 3000,
+    "Ratings": "3.8",
+    "count": "(5)",
+    "stock":  "Limited Stock!",
+    "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000015191655_437Wx649H_202211060047171.jpeg"
+  }
+]

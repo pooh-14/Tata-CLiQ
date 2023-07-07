@@ -1,7 +1,14 @@
 import React from 'react'
 import './MensSection.css'
+import { useNavigate } from 'react-router-dom';
 
 const MensSection = () => {
+
+  const router = useNavigate();
+    function goon(){
+        router('/mensmultiple')
+    }
+
   return (
     <div id="home">
       <div id="slide">
@@ -9,7 +16,7 @@ const MensSection = () => {
       </div>
       <div id="cate">
         <div>
-          <img src='https://assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg'/>
+          <img onClick={goon} src='https://assets.tatacliq.com/medias/sys_master/images/47396042702878.jpg'/>
         </div>
         <div>
           <img src='https://assets.tatacliq.com/medias/sys_master/images/47396042768414.jpg'/>
