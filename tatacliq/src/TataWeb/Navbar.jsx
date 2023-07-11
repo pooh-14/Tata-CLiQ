@@ -25,6 +25,11 @@ const router = useNavigate();
         router('/menssection')
     }
 
+    function goin(){
+        router('/cart')
+    }
+   
+
   return (
     <div id="navbar">
         <div id="left">
@@ -56,7 +61,7 @@ const router = useNavigate();
               </div>
               <div>
               <i class="fa-regular fa-heart fa-xl"></i>
-              <i class="fa-solid fa-bag-shopping fa-xl"></i>
+              <i onClick={goin} class="fa-solid fa-bag-shopping fa-xl"></i>
               </div>
             </div>
 

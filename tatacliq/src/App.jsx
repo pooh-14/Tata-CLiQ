@@ -6,6 +6,8 @@ import Navbar from "./TataWeb/Navbar";
 import Footer from "./TataWeb/Footer";
 import MensSection from "./TataWeb/MensSection";
 import Mensmultiple from "./../src/TataWeb/Mensmultiple";
+import Profile from "./TataWeb/Profile/Profile";
+import Cart from "./TataWeb/Cart/Cart";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/menssection" element={<MensSection />} />
         <Route exact path="/mensmultiple" element={<Mensmultiple/>}/>
+        <Route exact path="/profile" element={<Profile/>}/>
+        <Route exact path="/cart" element={<Cart/>}/>
       </Routes>
       <Footer />
     </div>
