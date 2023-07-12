@@ -1,5 +1,5 @@
-import "./../TataWeb/Mensmultiple.css";
-import myData from './../data/products.json'
+import "./Mensmultiple.css";
+import myData from '../../data/products.json'
 
 function Mensmultiple() {
   return(

@@ -1,0 +1,125 @@
+[
+    {
+        "p_id": "0",
+        "name": "Samsung",
+        "description": "Samsung Galaxy Buds 2 True Wireless In-Ear Earbuds with Active Noise Cancellation, Mic (Graphite)",
+        "price": 5359,
+        "Before Discount": 13990,
+        "Ratings": "4.4",
+        "count": "(158)",
+        "image": "https://img.tatacliq.com/images/i7/437Wx649H/MP000000010437583_437Wx649H_202108271528546.jpeg"
+      },
+      {
+        "p_id": "1",
+        "name": "PTron",
+        "description": "PTron Boom Ultima V2 In-Ear Gaming Wired Earphones with Mic, 3.5 mm Audio Jack (Black)",
+        "price": 399,
+        "Before Discount":1900,
+        "Ratings": "4.3",
+        "count": "(4)",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000015706506_437Wx649H_202212151054141.jpeg"
+      },
+      {
+        "p_id": "2",
+        "name": "OnePlus",
+        "description": "OnePlus Buds Z2 Bluetooth Truly Wireless in Ear Earbuds with mic (Obsidian Black)",
+        "price": 4499,
+        "Before Discount": 5999,
+        "Ratings": "3.8",
+        "count": "(51)",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016239579_437Wx649H_202302071202391.jpeg"
+      },
+      {
+        "p_id": "3",
+        "name": " Boat",
+        "description": "Boat Nirvana Ion Earbuds with Dual EQ Modes, Quad Mics ENx Technology (Ivory White, True Wireless)",
+        "price": 2299,
+        "Before Discount": 7990,
+        "Ratings": "4.6",
+        "count": "(14)",
+        "image": "https://img.tatacliq.com/images/i12/437Wx649H/MP000000018168860_437Wx649H_202306300453061.jpeg"
+      },
+      {
+        "p_id": "4",
+        "name": "Apple",
+        "description": "Apple AirPods (2nd gen) with Charging Case Bluetooth Headset with Mic (White, True Wireless)",
+        "price": 10999,
+        "Before Discount": 14900,
+        "Ratings": "4.6",
+        "count": "(903)",
+        "image": "https://img.tatacliq.com/images/i4/437Wx649H/MP000000004870365_437Wx649H_20190608021630.jpeg"
+      },
+      {
+        "p_id": "5",
+        "name": "Sony",
+        "description": "Sony WH-CH720N, Wireless Active Noise Cancellation Headphones With Mic, Upto 50 Hrs Playtime (Blue)",
+        "price": 8988,
+        "Before Discount": 14999,
+        "Ratings": "3.3",
+        "count": "(3)",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017346210_437Wx649H_202304251122151.jpeg"
+      },
+      {
+        "p_id": "6",
+        "name": "Mivi",
+        "description": "Mivi DuoPods A350 True Wireless in Ear Earbuds Fast Charging with Mic(Grey)",
+        "price": 1299,
+        "Before Discount": 2999,
+        "Ratings": "3.6",
+        "count": "(2)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017922803_437Wx649H_202306131414311.jpeg"
+      },
+      {
+        "p_id": "7",
+        "name": "Apple",
+        "description": "Apple EarPods with Lightning Connector Earphone (MMTN2ZM/A, White)",
+        "price": 1699,
+        "Before Discount": 2000,
+        "Ratings": "4.3",
+        "count": "(696)",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000000715985_437Wx649H_202306091508181.jpeg"
+      },
+      {
+        "p_id": "8",
+        "name": "Boat",
+        "description": "Boat Airdopes 138 Pro True Wireless Earbuds with Up to 45 Hours Playback (Black)",
+        "price": 1099,
+        "Before Discount": 2999,
+        "Ratings": "4.1",
+        "count": "(6)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000016239613_437Wx649H_202302071201171.jpeg"
+      },
+      {
+        "p_id": "9",
+        "name": "Boat",
+        "description": "boAt Nirvanaa 751ANC T Headset with Hybrid Active Noise Cancellation & 65H Playback (Gunmetal Grey)",
+        "price": 4499,
+        "Before Discount": 7990,
+        "Ratings": "4.1",
+        "count": "(95)",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000011975996_437Wx649H_202202091435431.jpeg"
+      },
+      {
+        "p_id": "10",
+        "name": "realme",
+        "description": "realme Buds Pro RMA208 Neckband with Mic (Party Yellow)",
+        "price": 2689,
+        "Before Discount": 5999,
+        "Ratings": "2.8",
+        "count": "(5)",
+        "image": "https://img.tatacliq.com/images/i7/437Wx649H/MP000000010358027_437Wx649H_202108201937421.jpeg"
+      },
+      {
+        "p_id": "11",
+        "name": "JBL",
+        "description": "JBL Wave Beam TWS, 32Hr, Deep Bass, Dual Mode, Quick Charge, IP54, Smart Ambient & TalkThru (Black)",
+        "price": 3799,
+        "Before Discount": 4999,
+        "Ratings": "3.8",
+        "count": "(11)",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000016591786_437Wx649H_202302241331361.jpeg"
+      }
+    ]
+    

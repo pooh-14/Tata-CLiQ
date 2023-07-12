@@ -8,10 +8,16 @@ const Navbar = () => {
 
 //usestate
 const[display, setdisplay] = useState(false);
-//onclick
+
+
 const handleClick = () => {
-  setdisplay(!display)
+  setdisplay(true)
 }
+
+const handleup = () => {
+  setdisplay(false)
+}
+
 
 //usestate
 const[drop, setdrop] = useState(false);
@@ -27,6 +33,34 @@ const router = useNavigate();
 
     function goin(){
         router('/cart')
+    }
+
+    function womsec(){
+      router('/womenssection')
+    }
+
+    function kidsec(){
+      router('/kidssection')
+    }
+
+    function kitsec(){
+      router('/kitchensection')
+    }
+
+    function beautsec(){
+      router('/beautysection')
+    }
+
+    function gadsec(){
+      router('/gadgetssection')
+    }
+
+    function jewelsec(){
+      router('/jewellerymultiple')
+    }
+
+    function accsec(){
+      router('/accessmultiple')
     }
    
 
@@ -47,7 +81,7 @@ const router = useNavigate();
               </span>
             </div>
             <div id="down">
-              <div id="categories" onPointerEnter={() => handleClick()}>
+              <div id="categories" onPointerEnter={() => handleClick()}  >
                 <p>Categories</p>
                <i className="fa-solid fa-angle-down" ></i>
               </div>
@@ -103,36 +137,36 @@ const router = useNavigate();
             {display && <div id="dropdown">
              <div>
               <div>
-              <p>Women's Fashion</p>
+              <p onClick={womsec} onMouseLeave={() => handleup()}>Women's Fashion</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
               <p onPointerEnter={() => handHover()}
-              onClick={goto}>Men's Fashion</p>
+              onClick={goto} onMouseLeave={() => handleup()}>Men's Fashion</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-              <p>Kids's Fashion</p>
+              <p onClick={kidsec} onMouseLeave={() => handleup()}>Kids's Fashion</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-              <p>Home & Kitchen</p>
+              <p onClick={kitsec} onMouseLeave={() => handleup()}>Home & Kitchen</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p>Beauty</p>
+                <p onClick={beautsec} onMouseLeave={() => handleup()}>Beauty</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p>Gadgets</p>
+                <p onClick={gadsec} onMouseLeave={() => handleup()}>Gadgets</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p>Jewellery</p>
+                <p onClick={jewelsec} onMouseLeave={() => handleup()}>Jewellery</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p>Accessories</p>
+                <p onClick={accsec} onMouseLeave={() => handleup()}>Accessories</p>
               <i class="fa-solid fa-angle-right"></i>
               </div>
              </div>
