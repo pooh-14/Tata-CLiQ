@@ -62,6 +62,10 @@ const router = useNavigate();
     function accsec(){
       router('/accessmultiple')
     }
+
+    function gowish(){
+      router('/wishlist')
+    }
    
 
   return (
@@ -94,7 +98,7 @@ const router = useNavigate();
               <input  placeholder='Search for Products'/>
               </div>
               <div>
-              <i class="fa-regular fa-heart fa-xl"></i>
+              <i onClick={gowish} class="fa-regular fa-heart fa-xl"></i>
               <i onClick={goin} class="fa-solid fa-bag-shopping fa-xl"></i>
               </div>
             </div>

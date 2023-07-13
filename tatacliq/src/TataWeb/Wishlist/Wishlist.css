@@ -1,0 +1,122 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wish{
+    margin-top: 100px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+#nav{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(215, 212, 212);
+    font-size: 30px;
+    font-weight: 700;
+    padding-top: 17px;
+    padding-left: 185px;
+}
+
+
+
+#list{
+    width: 75%;
+    /* border: 1px solid blue; */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+#list>div{
+    position: relative;
+    border: 1px solid rgb(220, 215, 215); 
+    margin-top: 20px;
+    height: 457px;
+    width: 17%;
+    /* margin-left: 18px; */
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+#delete{
+    position: absolute;
+    left: 173px;
+    top:10px;
+    background-size: contain;
+}
+
+#delete>img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+#list>div:hover{
+ transform: scale(1.04);
+ transition: 500ms;
+}
+
+#list>div>div:nth-child(1){
+    width: 100%;
+    height: 260px;
+}
+
+#list>div>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+#list>div>div:nth-child(2)>button{
+    width: 180px;
+    height: 35px;
+    border: 1px solid #da1c5c;
+    background-color: #da1c5c;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 7px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#list>div>div:nth-child(3){
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+#list>div>div:nth-child(3)>p:nth-child(1){
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#list>div>div:nth-child(3)>p:nth-child(2){
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+}
+
+
+#list>div>div:nth-child(3)>span:nth-child(3){
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#list>div>div:nth-child(3)>span:nth-child(4){
+    font-size: 13px;
+    color: grey;
+    margin-left: 10px;
+}
+
+#list>div>div:nth-child(3)>p:nth-child(5){
+    font-size: 14px;
+    color: rgb(203, 7, 7);
+    margin-top: 10px;
+}

@@ -1,0 +1,106 @@
+[
+    {
+        "p_id": "0",
+        "name": "QUIERO",
+        "description": "QUIERO Black Floral Print Fit & Flare Dress",
+        "price": 1304,
+        "Before Discount": 2899,
+        "Ratings": "3.8",
+        "count": "(5)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000015738593_437Wx649H_202212170619361.jpeg"
+      },
+      {
+        "p_id": "1",
+        "name": "Styli",
+        "description": "Styli Blue Maxi Dress",
+        "price": 916,
+        "Before Discount": 2349,
+        "Ratings": "4.6",
+        "count": "(14)",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017516710_437Wx649H_202305112048011.jpeg"
+      },
+      {
+        "p_id": "2",
+        "name": "Lakme",
+        "description": "Lakme 9 to 5 Primer Plus Matte Liquid Lip Color MP1 Everyday Pink - 4.2 ml",
+        "price": 474,
+        "Before Discount": 499,
+        "Ratings": "3.7",
+        "count": "(31)",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000013861884_437Wx649H_202207211636205.jpeg"
+      },
+      {
+        "p_id": "3",
+        "name": "Rare",
+        "description": "Rare Blue Printed Maxi Dress",
+        "price":1169,
+        "Before Discount": 2599,
+        "Ratings": "4.1",
+        "count": "(4)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i12/437Wx649H/MP000000018167142_437Wx649H_202306300338481.jpeg"
+      },
+      {
+        "p_id": "4",
+        "name": "Baggit",
+        "description": "Baggit Brown Printed Small Handbag",
+        "price": 1035,
+        "Before Discount": 2090,
+        "Ratings": "4.6",
+        "count": "(1)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i10/437Wx649H/MP000000017258251_437Wx649H_202304191224581.jpeg"
+      },
+      {
+        "p_id": "5",
+        "name": "Lakme",
+        "description": "Lakme 9To5 Vitamin C+ Facial Serum - 30 ml",
+        "price": 599,
+        "Ratings": "4.6",
+        "count": "(5)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000018019500_437Wx649H_202306202119235.jpeg"
+      },
+      {
+        "p_id": "6",
+        "name": "Candere by Kalyan Jewellers",
+        "description": "Candere by Kalyan Jewellers 22k Gold Traditional/Wedding Tushi Bangle for Women",
+        "price": 18745,
+        "Before Discount": 25098,
+        "Ratings": "5",
+        "count": "(1)",
+        "image": "https://img.tatacliq.com/images/i11/437Wx649H/MP000000017395554_437Wx649H_202306072016391.jpeg"
+      },
+      {
+        "p_id": "7",
+        "name": " Bahama",
+        "description": "Bahama Crinkle Light Purple Solid Medium Handbag",
+        "price": 2655,
+        "Before Discount": 5900,
+        "Ratings": "4.6",
+        "count": "(8)",
+        "image": "https://img.tatacliq.com/images/i4/437Wx649H/MP000000007281744_437Wx649H_20200715130018.jpeg"
+      },
+      {
+        "p_id": "8",
+        "name": "Boat",
+        "description": "boAt Nirvanaa 751ANC T Headset with Hybrid Active Noise Cancellation & 65H Playback (Gunmetal Grey)",
+        "price": 4499,
+        "Before Discount": 7990,
+        "Ratings": "4.1",
+        "count": "(95)",
+        "image": "https://img.tatacliq.com/images/i8/437Wx649H/MP000000011975996_437Wx649H_202202091435431.jpeg"
+      },
+      {
+        "p_id": "9",
+        "name": "Rare",
+        "description": "Rare Beige Printed A-Line Dress",
+        "price": 1125,
+        "Before Discount": 2499,
+        "Ratings": "4.6",
+        "count": "(8)",
+        "stock":  "Limited Stock!",
+        "image": "https://img.tatacliq.com/images/i12/437Wx649H/MP000000018167162_437Wx649H_202306300339581.jpeg"
+      }
+]

@@ -20,6 +20,7 @@ import KidsSection from "./TataWeb/KIDS/KidsSection";
 import KitchenSection from "./TataWeb/KITCHEN/KitchenSection";
 import BeautySection from "./TataWeb/BEAUTY/BeautySection";
 import GadgetsSection from "./TataWeb/GADGETS/GadgetsSection";
+import Wishlist from "./TataWeb/Wishlist/Wishlist";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/kitchensection" element={<KitchenSection/>}/>
         <Route exact path="/beautysection" element={<BeautySection/>}/>
         <Route exact path="/gadgetssection" element={<GadgetsSection/>}/>
+        <Route exact path="/wishlist" element={<Wishlist/>}/>
       </Routes>
       <Footer />
     </div>
