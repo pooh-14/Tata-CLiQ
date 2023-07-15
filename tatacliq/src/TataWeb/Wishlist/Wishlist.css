@@ -38,7 +38,7 @@
     border: 1px solid rgb(220, 215, 215); 
     margin-top: 20px;
     height: 457px;
-    width: 17%;
+    width: 17.5%;
     /* margin-left: 18px; */
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
@@ -46,7 +46,7 @@
 
 #delete{
     position: absolute;
-    left: 173px;
+    left: 161px;
     top:10px;
     background-size: contain;
 }
@@ -84,7 +84,7 @@
     font-weight: 700;
     border-radius: 7px;
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 #list>div>div:nth-child(3){

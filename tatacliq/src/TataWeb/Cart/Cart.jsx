@@ -1,7 +1,13 @@
 import React from 'react'
 import './Cart.css'
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
+    const router = useNavigate();
+    function check(){
+        router('/checkout')
+    }
+
   return (
     <div id='cartfull'>
         <div>
@@ -66,7 +72,7 @@ const Cart = () => {
                     </div>
                     <div>
                         <p><b>Total</b>  ₹ 4049</p>
-                        <button>Checkout</button>
+                        <button onClick={check}>Checkout</button>
                     </div>
 
                     <div>
