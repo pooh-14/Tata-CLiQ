@@ -22,13 +22,14 @@ import BeautySection from "./TataWeb/BEAUTY/BeautySection";
 import GadgetsSection from "./TataWeb/GADGETS/GadgetsSection";
 import Wishlist from "./TataWeb/Wishlist/Wishlist";
 import Checkout from "./TataWeb/Cart/Checkout";
+import AddProducts from "./TataWeb/Navbar/AddProducts";
 
 function App() {
   return (
     <div>
       <Navbar />
       <Routes>
-        <Route exact path="/home" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/menssection" element={<MensSection />} />
         <Route exact path="/mensmultiple" element={<Mensmultiple/>}/>
         <Route exact path="/profile" element={<Profile/>}/>
@@ -47,6 +48,7 @@ function App() {
         <Route exact path="/gadgetssection" element={<GadgetsSection/>}/>
         <Route exact path="/wishlist" element={<Wishlist/>}/>
         <Route exact path="/checkout" element={<Checkout/>}/>
+        <Route exact path="/addproducts" element={<AddProducts/>}/>
       </Routes>
       <Footer />
     </div>

@@ -77,6 +77,7 @@ const router = useNavigate();
             <div id="up">
               <p>Tata CLiQ Luxury</p>
               <span>
+                <p onClick={()=>router('/addproducts')}>Add Products</p>
                 <p>CLiQ Cash</p>
                 <p>Gift Card</p>
                 <p>CliQ Care</p>
