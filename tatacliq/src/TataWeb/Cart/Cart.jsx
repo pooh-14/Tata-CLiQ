@@ -1,12 +1,78 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import './Cart.css'
-import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-    const router = useNavigate();
-    function check(){
-        router('/checkout')
+  const [finalprice, setFinalPrice] = useState(0);
+  const [userCart, setUserCart] = useState([]);
+  const router = useNavigate();
+
+  // console.log(userCart, "- userCart");
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("Current-user"));
+    if (user?.email) {
+      const allUsers = JSON.parse(localStorage.getItem("Users"));
+      for (var i = 0; i < allUsers.length; i++) {
+        if (
+          allUsers[i].email == user.email &&
+          allUsers[i].password == user.password
+        ) {
+          setUserCart(allUsers[i].cart);
+          break;
+        }
+      }
+    } else {
+     toast.error("Please login to watch all cart products.");
+      router("/login");
     }
+  }, []);
+
+  useEffect(() => {
+    if (userCart.length) {
+        var totalprice = 0;
+        for (var i = 0; i < userCart.length; i++) {
+            totalprice += parseInt(userCart[i].price);
+        }
+        setFinalPrice(totalprice)
+    }
+}, [userCart])
+
+
+useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("Current-user"))
+    if (user) {
+        if (user?.role == "Seller") {
+            toast.error("Access granted only to Buyer.")
+            router('/')
+        }
+    } else {
+        toast.error("You are not a Logged in user.")
+        router('/practicelogin')
+    }
+}, [])
+
+
+  function checkout(){
+    const user = JSON.parse(localStorage.getItem("Current-user"));
+    if (user?.email) {
+      const allUsers = JSON.parse(localStorage.getItem("Users"));
+      for (var i = 0; i < allUsers.length; i++) {
+        if (
+          allUsers[i].email == user.email &&
+          allUsers[i].password == user.password
+        ) {
+          allUsers[i].cart=[];
+          break;
+        }
+      }
+      localStorage.setItem("Users",JSON.stringify(allUsers))
+    }
+    setFinalPrice([]);  
+    setUserCart([]);
+   toast.success("Your products will be delivered soon. Thankyou for shopping!")
+  }
 
   return (
     <div id='cartfull'>
@@ -22,27 +88,37 @@ const Cart = () => {
             <div id='cartleft'>
                 <div>
                     <img src='https://www.tatacliq.com/src/cart/components/img/Vector.svg'/>
-                    <p>Get this order at <s>₹8999</s>  <b>₹4049</b> only!</p>
+                    <p>Get more offers by adding coupons!</p>
                 </div>
+
                 <div>
+                  {userCart &&
+                  userCart.map((pro) => (
+                  <div>
                     <div>
-                        <img src='https://img.tatacliq.com/images/i8/437Wx649H/MP000000015101718_437Wx649H_202211012350021.jpeg'/>
+                        <img src={pro.image}/>
                     </div>
                     <div>
-                        <span>Vero Moda Purple A-Line Dress</span>
+                        <span>{pro.name}</span>
                         <span><img src='https://www.tatacliq.com/src/general/components/img/deliveryIcon.svg'/></span>
-                        <span>Delivery by 14th Jul |</span>
-                        <span>FREE</span>
-                        <p><b>₹4049.00</b> <s>₹8999.00</s> ₹4950.00 Off</p>
-                        <span>Color: Purple </span>   <span>Size: L</span> 
+                        <span>Delivery by 14th Aug |</span> <span>FREE</span>
+                        <p><b>₹{pro.price}</b></p>
+                         {/* <s>₹8999.00</s> ₹4950.00 Off</p> */}
+                        {/* <span>Color: Purple </span>    */}
+                        <span>Size: L</span> 
                         <div> 
                          <p>Quantity: 1</p>
                          <img src='https://www.tatacliq.com/src/general/components/img/WL5.svg'/>
                          <p>Save to wishlist</p>
                          <p>Remove</p>
                          </div>
-                    </div>
+                  </div>
                 </div>
+                 ))}
+
+                </div>
+
+
                 <button>Continue Shopping</button>
             </div>
             <div id='cartright'>
@@ -53,7 +129,7 @@ const Cart = () => {
                 <div>
                     <div>
                         <p>Bag Total</p>
-                        <span>₹8999.00</span>
+                        <span>₹{finalprice + finalprice}</span>
                     </div>
                     <div>
                         <p>Shipping Charge</p>
@@ -61,18 +137,18 @@ const Cart = () => {
                     </div>
                     <div>
                         <p>Bag Subtotal</p>
-                        <span>₹8999.00</span>
+                        <span>₹{finalprice}</span>
                     </div>
                     <div>
                         <p>Product Discount(s)</p>
-                        <span>-₹4950.00</span>
+                        <span>50%</span>
                     </div>
                     <div>
-                        <p>You will save ₹4950.00 on this order</p>
+                        <p>You will save 5o% on this order</p>
                     </div>
                     <div>
-                        <p><b>Total</b>  ₹ 4049</p>
-                        <button onClick={check}>Checkout</button>
+                        <p><b>Total</b>  ₹ {finalprice}</p>
+                        <button onClick={checkout}>Checkout</button>
                     </div>
 
                     <div>

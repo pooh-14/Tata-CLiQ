@@ -1,111 +1,172 @@
-import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
-import './Navbar.css'
-
-
+import "./Navbar.css";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../CONTEXT/AuthContext";
+import { toast } from "react-hot-toast";
 
 const Navbar = () => {
+  const { state, Login } = useContext(AuthContext);
+  const [userData, setUserData] = useState({
+    email: "",
+    password: "",
+    role: "",
+  });
 
-//usestate
-const[display, setdisplay] = useState(false);
+  //usestate
+  const [display, setdisplay] = useState(false);
 
+  const handleClick = () => {
+    setdisplay(true);
+  };
 
-const handleClick = () => {
-  setdisplay(true)
-}
+  const handleup = () => {
+    setdisplay(false);
+  };
 
-const handleup = () => {
-  setdisplay(false)
-}
+  // ------------****------------
 
+  //usestate
+  const [drop, setdrop] = useState(false);
+  //onclick
 
-//usestate
-const[drop, setdrop] = useState(false);
-//onclick
-const handHover = () => {
-  setdrop(!drop)
-}
+  const handHover = () => {
+    setdrop(!drop);
+  };
 
-const router = useNavigate();
-    function goto(){
-        router('/menssection')
+  // ------------**LOGIN**------------
+
+  const [logg, setlogg] = useState(false);
+
+  const logopen = () => {
+    setlogg(true);
+  };
+
+  const logclose = () => {
+    setlogg(false);
+  };
+
+  // --------------****------------------
+
+  const router = useNavigate();
+  function goto() {
+    router("/menssection");
+  }
+
+  function goin() {
+    router("/cart");
+  }
+
+  function womsec() {
+    router("/womenssection");
+  }
+
+  function kidsec() {
+    router("/kidssection");
+  }
+
+  function kitsec() {
+    router("/kitchensection");
+  }
+
+  function beautsec() {
+    router("/beautysection");
+  }
+
+  function gadsec() {
+    router("/gadgetssection");
+  }
+
+  function jewelsec() {
+    router("/jewellerymultiple");
+  }
+
+  function accsec() {
+    router("/accessmultiple");
+  }
+
+  function gowish() {
+    router("/wishlist");
+  }
+
+  function gopro(){
+    router("/profile")
+  }
+
+  // --------------****------------------
+
+  const handleChange = (event) => {
+    setUserData({ ...userData, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (userData.email && userData.password) {
+      var flag = false;
+      const allUsers = JSON.parse(localStorage.getItem("Users"));
+      for (var i = 0; i < allUsers.length; i++) {
+        if (
+          allUsers[i].email == userData.email &&
+          allUsers[i].password == userData.password
+        ) {
+          localStorage.setItem("Current-user", JSON.stringify(allUsers[i]));
+          Login(allUsers[i]);
+          setUserData({ email: "", password: "", role: "" });
+          toast.success("Login Successfull!");
+          router("/");
+          flag = true;
+          break;
+        }
+      }
+      if (flag == false) {
+        toast.error("Please Check your email & password.");
+      }
+    } else {
+      toast.error("Please fill the all fields.");
     }
+  };
 
-    function goin(){
-        router('/cart')
-    }
-
-    function womsec(){
-      router('/womenssection')
-    }
-
-    function kidsec(){
-      router('/kidssection')
-    }
-
-    function kitsec(){
-      router('/kitchensection')
-    }
-
-    function beautsec(){
-      router('/beautysection')
-    }
-
-    function gadsec(){
-      router('/gadgetssection')
-    }
-
-    function jewelsec(){
-      router('/jewellerymultiple')
-    }
-
-    function accsec(){
-      router('/accessmultiple')
-    }
-
-    function gowish(){
-      router('/wishlist')
-    }
-   
+  function newUser() {
+    router("/register");
+  }
 
   return (
     <div id="navbar">
-        <div id="left">
-          <img src="http://www.pngimagesfree.com/LOGO/T/Tata-CLiQ/Tata-cliq-logo-PNG-Black-and-White.png"/>
+      <div id="left">
+        <img onClick={()=> router('/')} src="http://www.pngimagesfree.com/LOGO/T/Tata-CLiQ/Tata-cliq-logo-PNG-Black-and-White.png" />
+      </div>
+      <div id="right">
+        <div id="up">
+          <p>Tata CLiQ Luxury</p>
+          <span>
+            <p onClick={() => router("/addproducts")}>Add Products</p>
+            <p>CLiQ Cash</p>
+            <p>Gift Card</p>
+            <p>CliQ Care</p>
+            <p>Track Orders</p>
+            <p onClick={logopen}>{userData.name? userData.name : <p>Sign in/ Sign up</p>}</p>
+          </span>
         </div>
-        <div id="right">
-            <div id="up">
-              <p>Tata CLiQ Luxury</p>
-              <span>
-                <p onClick={()=>router('/addproducts')}>Add Products</p>
-                <p>CLiQ Cash</p>
-                <p>Gift Card</p>
-                <p>CliQ Care</p>
-                <p>Track Orders</p>
-                <p>Sign in/ Sign up</p>
-              </span>
-            </div>
-            <div id="down">
-              <div id="categories" onPointerEnter={() => handleClick()}  >
-                <p>Categories</p>
-               <i className="fa-solid fa-angle-down" ></i>
-              </div>
-              <div>
-               <p>Brands</p>
-               <i className="fa-solid fa-angle-down" ></i>
-              </div>
-              <div>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input  placeholder='Search for Products'/>
-              </div>
-              <div>
-              <i onClick={gowish} class="fa-regular fa-heart fa-xl"></i>
-              <i onClick={goin} class="fa-solid fa-bag-shopping fa-xl"></i>
-              </div>
-            </div>
+        <div id="down">
+          <div id="categories" onPointerEnter={() => handleClick()}>
+            <p>Categories</p>
+            <i className="fa-solid fa-angle-down"></i>
+          </div>
+          <div>
+            <p>Brands</p>
+            <i className="fa-solid fa-angle-down"></i>
+          </div>
+          <div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input placeholder="Search for Products" />
+          </div>
+          <div>
+            <i onClick={gowish} class="fa-regular fa-heart fa-xl"></i>
+            <i onClick={goin} class="fa-solid fa-bag-shopping fa-xl"></i>
+            <i onClick={gopro} class="fa-regular fa-circle-user fa-xl "></i>
+          </div>
+        </div>
 
-
-            {/* <div id="dropdown">
+        {/* <div id="dropdown">
               <div>
               <p>Women's Fashion</p>
               <i class="fa-solid fa-angle-right"></i>
@@ -139,43 +200,63 @@ const router = useNavigate();
               <i class="fa-solid fa-angle-right"></i>
               </div>
             </div> */}
-            {display && <div id="dropdown">
-             <div>
+        {display && (
+          <div id="dropdown">
+            <div>
               <div>
-              <p onClick={womsec} onMouseLeave={() => handleup()}>Women's Fashion</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={womsec} onMouseLeave={() => handleup()}>
+                  Women's Fashion
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-              <p onPointerEnter={() => handHover()}
-              onClick={goto} onMouseLeave={() => handleup()}>Men's Fashion</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p
+                  onPointerEnter={() => handHover()}
+                  onClick={goto}
+                  onMouseLeave={() => handleup()}
+                >
+                  Men's Fashion
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-              <p onClick={kidsec} onMouseLeave={() => handleup()}>Kids's Fashion</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={kidsec} onMouseLeave={() => handleup()}>
+                  Kids's Fashion
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-              <p onClick={kitsec} onMouseLeave={() => handleup()}>Home & Kitchen</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={kitsec} onMouseLeave={() => handleup()}>
+                  Home & Kitchen
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p onClick={beautsec} onMouseLeave={() => handleup()}>Beauty</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={beautsec} onMouseLeave={() => handleup()}>
+                  Beauty
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p onClick={gadsec} onMouseLeave={() => handleup()}>Gadgets</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={gadsec} onMouseLeave={() => handleup()}>
+                  Gadgets
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p onClick={jewelsec} onMouseLeave={() => handleup()}>Jewellery</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={jewelsec} onMouseLeave={() => handleup()}>
+                  Jewellery
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
               <div>
-                <p onClick={accsec} onMouseLeave={() => handleup()}>Accessories</p>
-              <i class="fa-solid fa-angle-right"></i>
+                <p onClick={accsec} onMouseLeave={() => handleup()}>
+                  Accessories
+                </p>
+                <i class="fa-solid fa-angle-right"></i>
               </div>
-             </div>
-             <div id="dropwomen">
+            </div>
+            <div id="dropwomen">
               <div>
                 <h4>Shop All Ethnic Wear</h4>
                 <p>Kurtis & Kurtas</p>
@@ -225,7 +306,7 @@ const router = useNavigate();
                 <p>Trousers</p>
                 <p>Skirts</p>
               </div>
-              
+
               <div>
                 <h4>Activewear & Sportswear</h4>
                 <p>T-shirts</p>
@@ -235,7 +316,7 @@ const router = useNavigate();
                 <p>Track Pants</p>
                 <p>Innerwear</p>
               </div>
-              
+
               <div>
                 <h4>Shop All Footwear</h4>
                 <p>Casual Footwear</p>
@@ -245,7 +326,7 @@ const router = useNavigate();
                 <p>Sports Shoes</p>
                 <p>Ethnic Footwear</p>
               </div>
-              
+
               <div>
                 <h4>Jewellery</h4>
                 <p>Gold</p>
@@ -253,12 +334,58 @@ const router = useNavigate();
                 <p>Silver</p>
                 <p>Fashion Jewellery</p>
                 <h4>Watches</h4>
-                <p>Smart</p> 
+                <p>Smart</p>
               </div>
             </div>
-            </div> }
+          </div>
+        )}
 
-            {/* <div id="dropmen">
+        {/* ----------------------**LOGIN**--------------------------------- */}
+
+        {logg ? (
+          <div id="logon">
+            <div id="logbox">
+              <div id="welcome">
+                <i onClick={logclose} class="fa-solid fa-xmark fa-xl"></i>
+                <p>Welcome to Tata CLiQ</p>
+              </div>
+              <div id="logform">
+                <form onSubmit={handleSubmit}>
+                  <label>Enter your Email ID :</label>
+                  <br />
+                  <input
+                    type="email"
+                    name="email"
+                    value={userData.email}
+                    onChange={handleChange}
+                  />
+                  <br />
+                  <label>Enter your Password :</label>
+                  <br />
+                  <input
+                    type="password"
+                    name="password"
+                    value={userData.password}
+                    onChange={handleChange}
+                  />
+                  <br />
+                  <button onMouseLeave={logclose}>LOGIN</button>
+                  <p>
+                    New User? <u onClick={newUser}>Register</u>
+                  </p>
+                </form>
+                <p>
+                  This site is protected by reCAPTCHA and the Google{" "}
+                  <b>Privacy Policy</b> and <b>Terms of Service</b> apply. By
+                  continuing, you agree to our <b>Terms of Use</b> and{" "}
+                  <b>Privacy Policy</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : null}
+
+        {/* <div id="dropmen">
               <div>
                 <h4>Shop All Ethnic Wear</h4>
                 <p>Kurtis & Kurtas</p>
@@ -340,7 +467,7 @@ const router = useNavigate();
               </div>
             </div> */}
 
-            {/* {drop && <div id="dropmen">
+        {/* {drop && <div id="dropmen">
               <div>
                 <h4>Tops</h4>
                 <p>T-shirts</p>
@@ -405,12 +532,9 @@ const router = useNavigate();
                 <p>Sunglasses</p>
               </div>
             </div>} */}
-
-            
-
-        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -23,6 +23,9 @@ import GadgetsSection from "./TataWeb/GADGETS/GadgetsSection";
 import Wishlist from "./TataWeb/Wishlist/Wishlist";
 import Checkout from "./TataWeb/Cart/Checkout";
 import AddProducts from "./TataWeb/Navbar/AddProducts";
+import SingleProducts from "./TataWeb/Products/SingleProducts";
+import AllProducts from "./TataWeb/Products/AllProducts";
+import Register from "./TataWeb/Navbar/Register";
 
 function App() {
   return (
@@ -49,6 +52,10 @@ function App() {
         <Route exact path="/wishlist" element={<Wishlist/>}/>
         <Route exact path="/checkout" element={<Checkout/>}/>
         <Route exact path="/addproducts" element={<AddProducts/>}/>
+        <Route exact path="/singleproducts/:id" element={<SingleProducts/>}/>
+        <Route exact path="/checkout" element={<Checkout/>}/>
+        <Route exact path="/allproducts" element={<AllProducts/>}/>
+        <Route exact path="/register" element={<Register/>}/>
       </Routes>
       <Footer />
     </div>

@@ -1,7 +1,11 @@
 import React from 'react'
 import './Home.css'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+
+  const router =useNavigate();
+  
   return (
     <div id="home">
       <div id="slide">
@@ -9,7 +13,7 @@ const Home = () => {
       </div>
       <div id="cate">
         <div>
-          <img src='https://assets.tatacliq.com/medias/sys_master/images/47596848218142.jpg'/>
+          <img onClick={()=>router('/allproducts')} src='https://assets.tatacliq.com/medias/sys_master/images/47596848218142.jpg'/>
         </div>
         <div>
           <img src='https://assets.tatacliq.com/medias/sys_master/images/47548678373406.jpg'/>

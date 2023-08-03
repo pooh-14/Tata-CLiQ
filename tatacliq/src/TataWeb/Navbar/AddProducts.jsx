@@ -24,7 +24,7 @@ const AddProducts = () => {
             productsArray.push(productData);
             localStorage.setItem("Products", JSON.stringify(productsArray))
             setProductData({ name: "", price: "", image: "", category: "Other" })
-            // router('/allproducts');
+            router('/allproducts');
             toast.success("Product added Successfully!")
         } else {
             toast.error("Please fill all the data!")
@@ -35,18 +35,18 @@ const AddProducts = () => {
         setProductData({ ...productData, ["category"]: event.target.value })
     }
 
-    // useEffect(() => {
-    //     const user = JSON.parse(localStorage.getItem("Current-user"))
-    //     if (user) {
-    //         if (user?.role == "Buyer") {
-    //             toast.error("Access granted only to Seller.")
-    //             router('/')
-    //         }
-    //     } else {
-    //         toast.error("You are not a Logged in user.")
-    //         router('/login')
-    //     }
-    // }, [])
+    useEffect(() => {
+        const user = JSON.parse(localStorage.getItem("Current-user"))
+        if (user) {
+            if (user?.role == "Buyer") {
+                toast.error("Access granted only to Seller.")
+                router('/')
+            }
+        } else {
+            toast.error("You are not a Logged in user.")
+            router('/login')
+        }
+    }, [])
     
   return (
     <div>
