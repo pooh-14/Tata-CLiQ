@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 const Profile = () => {
-  const { state, Login } = useContext(AuthContext);
 
+  const { state, Login } = useContext(AuthContext);
+  const [proo, setproo] = useState(false);
   const [userData, setUserData] = useState({});
   const router = useNavigate();
 
-  const [proo, setproo] = useState(false);
 
   const proopen = () => {
     setproo(true);
@@ -24,7 +24,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (state) {
-      setUserData(state.user);
+      setUserData(state?.user);
     }
   }, [state]);
 
@@ -47,7 +47,7 @@ const Profile = () => {
   }, []);
 
   function handleChange(event) {
-    setUserData({ ...userData, [event.target.name]: event.target.value });
+    setUserData({...userData,[event.target.name]:event.target.value });
   }
 
   function handleSubmit(event) {
@@ -56,13 +56,13 @@ const Profile = () => {
     const allUsers = JSON.parse(localStorage.getItem("Users"));
     for (var i = 0; i < allUsers.length; i++) {
       if (
-        allUsers[i].email === currentUser.email &&
-        allUsers[i].password === currentUser.password
+        allUsers[i].email === currentUser?.email &&
+        allUsers[i].password === currentUser?.password
       ) {
-        allUsers[i].name = userData.name;
-        allUsers[i].password = userData.password;
-        currentUser.password = userData.password;
-        currentUser.name = userData.name;
+        allUsers[i].name = userData?.name;
+        allUsers[i].password = userData?.password;
+        currentUser.password = userData?.password;
+        currentUser.name = userData?.name;
       }
     }
     Login(currentUser);
