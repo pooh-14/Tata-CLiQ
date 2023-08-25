@@ -253,13 +253,16 @@
 }
 
 #logbox{
+    position: absolute;
     width: 450px;
     height: 600px;
     margin: auto;
-    margin-top: 20px;
+    top: 20px;
     border: 1px solid white;
     background-color: white;
     border-radius: 30px;
+    z-index: 1000;
+    left: 35%;
 }
 
 #welcome>i{

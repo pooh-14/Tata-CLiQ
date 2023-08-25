@@ -26,8 +26,11 @@ import AddProducts from "./TataWeb/Navbar/AddProducts";
 import SingleProducts from "./TataWeb/Products/SingleProducts";
 import AllProducts from "./TataWeb/Products/AllProducts";
 import Register from "./TataWeb/Navbar/Register";
+import { useContext } from "react";
+import { AuthContext } from "./TataWeb/CONTEXT/AuthContext";
 
 function App() {
+  const { state } = useContext(AuthContext);
   return (
     <div>
       <Navbar />
